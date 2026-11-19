@@ -1,0 +1,13 @@
+[project]
+name = "visionproyecto"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "optuna-dashboard>=0.21.0",
+    "tensorboard>=2.21.0",
+    "torch>=2.15.0",
+    "torchaudio>=2.11.1",
+    "torchvision>=0.29.2",
+]
