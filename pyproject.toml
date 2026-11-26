@@ -5,7 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.5",
+    "opencv-python>=5.1.0.95",
     "optuna-dashboard>=0.21.0",
+    "scikit-learn>=1.9.1",
     "tensorboard>=2.21.0",
     "torch>=2.15.0",
     "torchaudio>=2.11.1",

@@ -1,25 +1,6 @@
 import cv2 as cv
 
 
-#Generamos una función que nos ayude a modificar las imágenes para comprobar si el modelo ha aprendido o ha memorizado
-def modificacion_zonas(imagen):
-    alto, ancho = imagen.shape[:2] #obtenemos las características ya que desconocemos el tamaño de cada foto
-    
-    alto_roi = alto // 10
-    ancho_roi = ancho // 10
-    
-    roi1 = imagen[0:alto_roi, ancho-ancho_roi:ancho]#obtenemos como primer fragmento la esquina superior izquierda
-
-    cv.imshow("ROI 1", roi1)
-    cv.waitKey(0)
-
-    roi2 = imagen[alto-alto_roi:alto, 0:ancho_roi] #obtenemos como segundo fragmento la esquina inferior derecha
-    
-    cv.imshow("ROI 2 ", roi2)
-    cv.waitKey(0)
-    cv.destroyAllWindows()
-
-    return roi1, roi2
 
 
 def histgrama(imagen):
@@ -57,5 +38,3 @@ def histgrama(imagen):
 
         plt.show()    
 
-
-def modificacion_transformacion(imagen):

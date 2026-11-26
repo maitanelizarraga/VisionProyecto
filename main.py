@@ -1,18 +1,16 @@
 import cv2 as cv
-import analisis_modificaciones
+import matplotlib.pyplot as plt
 
-def mostrar_imagen(ruta, nombre):
-    imagen = cv.imread(ruta)
-    cv.imshow(nombre, imagen)
-    print(imagen.shape)
-    cv.waitKey(0)
-    cv.destroyAllWindows()
-    return imagen
-
+from clasificadores import clasificador_todos
 
 
 def main():
-    print("Hello from visionproyecto!")
+    print("=== PROYECTO: CLASIFICACIÓN DE HOJAS ===")
+    print("Ejecutando los 3 clasificadores en orden...\n")
+    clasificador_todos()
+    cv.destroyAllWindows()
+    plt.close("all")
+    print("\n=== FIN ===")
 
 
 if __name__ == "__main__":
